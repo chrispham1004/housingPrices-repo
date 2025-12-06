@@ -71,8 +71,5 @@ test_data['households'] = np.log(test_data['households'] + 1)
 test_data =  test_data.join(pd.get_dummies(test_data.ocean_proximity))
 test_data = test_data.drop(['ocean_proximity'],axis=1)
 
-x_test = test_data.drop(['median_house_value'],axis=1)
-y_test = test_data['median_house_value']
 
-
-print(reg.score(x_test,y_test))
+reg.score(x_test,y_test)
